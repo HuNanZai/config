@@ -1,0 +1,20 @@
+{
+	"name":     "hunanzai/config",
+	"author":   "wuwanli",
+	"email":    "123165587@qq.com",
+	"description": "我们项目中使用的php配置文件基类",
+
+	"require":
+	{
+		"symfony/config": "~2.0.25"
+	},
+
+	"autoload":
+	{
+		"psr-4":
+		{
+			"HuNanZai\\Component\\Config\\": "src/",
+			"HuNanZai\\Component\\Config\\Test\\": "tests/"
+		}
+	}
+}
