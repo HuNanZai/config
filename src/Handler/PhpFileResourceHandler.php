@@ -43,7 +43,7 @@ class PhpFileResourceHandler
 
             if ($info->isFile() && $info->getExtension() == 'php' && $info->isReadable()) {
                 $tmp    = explode('.', $base_name);
-                $config_array[$tmp[0]]  = include_once "{$real_path}";
+                $config_array[$tmp[0]]  = include "{$real_path}";
             } elseif ($info->isDir() && !$info->isDot()) {//遍历读取文件夹配置
                 $config_array[$base_name]   = $this->getResourceArrayFromDirectory($real_path);
             }
