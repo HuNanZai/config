@@ -14,16 +14,16 @@ class Service
     /**
      * @var Resource
      */
-    private static $config  = null;
+    private static $resource  = null;
 
-    public static function setConfig(Resource $config)
+    public static function setResource(Resource $resource)
     {
-        self::$config   = $config;
+        self::$resource   = $resource;
     }
 
     public static function getConfig(Param $param)
     {
-        $config = self::$config->value;
+        $config = self::$resource->value;
 
         while ($param) {
             if (isset($config[$param->value])) {
